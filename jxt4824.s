@@ -39,12 +39,10 @@ _calc_result:
     	    CMP R5, #0		 @ compare R5 with 0
     	    MOVEQ R8, R1	 @ move if equal R1 to R8
     	    MOVEQ R9, R1	 @ move if equal R1 to R9 
-    	    
     	    CMP R1, R8		 @ compare R1 to R8
     	    MOVLT R8, R1	 @ move less than R8 to R1
     	    CMP R1, R9		 @ compare R1 to R9
     	    MOVGT R9, R1 	 @ move if greater than R1 to R9
-    	    
             ADD R5, R5, #1       @ increment loop counter
             CMP R5, #10          @ check for end of loop
             BNE _loop2           @ loop if necessary
