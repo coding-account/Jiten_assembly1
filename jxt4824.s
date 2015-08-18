@@ -33,10 +33,10 @@ _get_input:
     
 _calc_result:
     MOV R5, #0           @ initialize loop counter
-     
+    MOV R10, #0
     _loop2: POP {R1}             @ remove a value from the stack
     	    Add R7, R7, R1	 @ add R7 to R1 and store in R7
-    	    CMP R5, #0		 @ compare R5 with 0
+    	    CMP R10, #0		 @ compare R5 with 0
     	    MOVEQ R8, R1	 @ move if equal R1 to R8
     	    MOVEQ R9, R1	 @ move if equal R1 to R9 
     	    CMP R1, R8		 @ compare R1 to R8
@@ -45,6 +45,7 @@ _calc_result:
     	    MOVGT R9, R1 	 @ move if greater than R1 to R9
             ADD R5, R5, #1       @ increment loop counter
             CMP R5, #10          @ check for end of loop
+            Add R10, #1
             BNE _loop2           @ loop if necessary
     MOV PC, LR          @ return
 
