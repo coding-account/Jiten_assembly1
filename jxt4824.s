@@ -48,9 +48,6 @@ _calc_result:
             ADD R5, R5, #1       @ increment loop counter
             CMP R5, #10          @ check for end of loop
             BNE _loop2           @ loop if necessary
-    MOV R7, #70         @ store the sum in R7
-    MOV R8, #80         @ store the min in R8
-    MOV R9, #90         @ store the max in R9
     MOV PC, LR          @ return
 
  _print_result:
