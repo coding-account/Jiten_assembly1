@@ -33,7 +33,18 @@ _get_input:
     
 _calc_result:
     MOV R5, #0           @ initialize loop counter
+     
     _loop2: POP {R1}             @ remove a value from the stack
+    	    Add R7, R7, R1
+    	    CMP R5, #0
+    	    MOVEQ R8, R1
+    	    MOVEQ R9, R1
+    	    
+    	    CMP R, R8
+    	    MOVLT R8, R1
+    	    CMP R1, R9
+    	    MOVGT R9, R1
+    	    
             ADD R5, R5, #1       @ increment loop counter
             CMP R5, #10          @ check for end of loop
             BNE _loop2           @ loop if necessary
