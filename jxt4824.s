@@ -199,7 +199,7 @@ _reg_dump:
     
 .data
 name_str:
-.asciz "Sarah Connor: 1000123456 \n"
+.asciz "Jitendra Thapa: 1000864824 \n"
 prompt_str:
 .asciz "Please enter 10 positive integers: \n"
 format_str:     
