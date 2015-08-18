@@ -40,7 +40,7 @@ _calc_result:
     	    MOVEQ R8, R1
     	    MOVEQ R9, R1
     	    
-    	    CMP R, R8
+    	    CMP R1, R8
     	    MOVLT R8, R1
     	    CMP R1, R9
     	    MOVGT R9, R1
